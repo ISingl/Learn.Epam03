@@ -88,5 +88,33 @@ namespace Task1_GCD
 
             return tmp;
         }
+
+        /// <summary>
+        /// The binary GCD algorithm, also known as Stein's algorithm, 
+        /// is an algorithm that computes the greatest common divisor of two nonnegative integers.
+        /// </summary>
+        /// <param name="a">The first integer</param>
+        /// <param name="b">The second integer</param>
+        /// <returns>Greatest common divisor</returns>
+        public static int SteinAlgorithm(int a, int b)
+        {
+            if (a == 0 && b == 0) throw new DivideByZeroException();
+            if (a == b || b == 0) return a;
+            if (a == 0) return b;
+
+            bool aIsEven = (a & 1u) == 0;
+            bool bIsEven = (b & 1u) == 0;
+
+            if (aIsEven && bIsEven)
+                return SteinAlgorithm(a >> 1, b >> 1) << 1;
+            else if (aIsEven && !bIsEven)
+                return SteinAlgorithm(a >> 1, b);
+            else if (bIsEven)
+                return SteinAlgorithm(a, b >> 1);
+            else if (a > b)
+                return SteinAlgorithm((a - b) >> 1, b);
+            else
+                return SteinAlgorithm(a, (b - a) >> 1);
+        }
     }
 }

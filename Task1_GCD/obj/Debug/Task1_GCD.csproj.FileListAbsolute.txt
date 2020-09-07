@@ -1,0 +1,5 @@
+C:\Users\ver-s\source\repos\Learn.EPAM\Learn.Epam 03\Task1\Task1_GCD\bin\Debug\Task1_GCD.dll
+C:\Users\ver-s\source\repos\Learn.EPAM\Learn.Epam 03\Task1\Task1_GCD\bin\Debug\Task1_GCD.pdb
+C:\Users\ver-s\source\repos\Learn.EPAM\Learn.Epam 03\Task1\Task1_GCD\obj\Debug\Task1_GCD.csprojAssemblyReference.cache
+C:\Users\ver-s\source\repos\Learn.EPAM\Learn.Epam 03\Task1\Task1_GCD\obj\Debug\Task1_GCD.dll
+C:\Users\ver-s\source\repos\Learn.EPAM\Learn.Epam 03\Task1\Task1_GCD\obj\Debug\Task1_GCD.pdb

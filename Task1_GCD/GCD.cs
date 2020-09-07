@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Task1_GCD
 {
@@ -90,6 +87,24 @@ namespace Task1_GCD
         }
 
         /// <summary>
+        /// The Euclidean algorithm is an efficient method for computing the greatest common divisor (GCD) of two integers (numbers),
+        /// the largest number that divides them both without a remainder.
+        /// </summary>
+        /// <param name="a">The first integer</param>
+        /// <param name="b">The second integer</param>
+        /// <param name="time">Total time spent in milliseconds</param>
+        /// <returns>Greatest common divisor</returns>
+        public static int EuclidAlgorithm(int a, int b, out long time)
+        {
+            var sw = Stopwatch.StartNew();
+            int result = EuclidAlgorithm(a, b);
+            sw.Stop();
+            time = sw.ElapsedMilliseconds;
+
+            return result;
+        }
+
+        /// <summary>
         /// The binary GCD algorithm, also known as Stein's algorithm, 
         /// is an algorithm that computes the greatest common divisor of two nonnegative integers.
         /// </summary>
@@ -115,6 +130,24 @@ namespace Task1_GCD
                 return SteinAlgorithm((a - b) >> 1, b);
             else
                 return SteinAlgorithm(a, (b - a) >> 1);
+        }
+
+        /// <summary>
+        /// The binary GCD algorithm, also known as Stein's algorithm, 
+        /// is an algorithm that computes the greatest common divisor of two nonnegative integers.
+        /// </summary>
+        /// <param name="a">The first integer</param>
+        /// <param name="b">The second integer</param>
+        /// <param name="time">Total time spent in milliseconds</param>
+        /// <returns>Greatest common divisor</returns>
+        public static int SteinAlgorithm(int a, int b, out long time)
+        {
+            var sw = Stopwatch.StartNew();
+            int result = SteinAlgorithm(a, b);
+            sw.Stop();
+            time = sw.ElapsedMilliseconds;
+
+            return result;
         }
     }
 }

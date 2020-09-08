@@ -42,7 +42,7 @@ namespace Task1_GCD
         /// <returns>Greatest common divisor</returns>
         public static int EuclidAlgorithm(int a, int b, int c)
         {
-            return EuclidAlgorithm(new int[] { a, b, c });
+            return EuclidAlgorithm( a, b, c );
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Task1_GCD
         /// <returns>Greatest common divisor</returns>
         public static int EuclidAlgorithm(int a, int b, int c, int d)
         {
-            return EuclidAlgorithm(new int[] { a, b, c, d });
+            return EuclidAlgorithm( a, b, c, d );
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Task1_GCD
         /// <returns>Greatest common divisor</returns>
         public static int EuclidAlgorithm(int a, int b, int c, int d, int e)
         {
-            return EuclidAlgorithm(new int[] { a, b, c, d, e });
+            return EuclidAlgorithm( a, b, c, d, e );
         }
 
         private static int EuclidAlgorithm(params int[] numbers)

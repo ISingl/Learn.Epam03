@@ -11,11 +11,16 @@ namespace Task1_UI_Console
     {
         static void Main(string[] args)
         {
-            int a = Int32.MaxValue;
-            int b = 1;
-            long time;
-            Console.WriteLine($"{a}, {b} =>{GCD.EuclidAlgorithm(a, b, out time)} =>{time}ms");
-            Console.WriteLine($"{a}, {b} =>{GCD.SteinAlgorithm(a, b, out time)} =>{time}ms");
+            Console.Write("Greatest common divisor\nInput two numbers using a space and press enter: ");
+            var tmp = Console.ReadLine().Split(' ');
+            if (tmp.Length < 2) return;
+            if (!Int32.TryParse(tmp[0], out int a)) return;
+            if (!Int32.TryParse(tmp[1], out int b)) return;
+
+            Console.WriteLine($"\n{String.Format(new string('=', 50))}\n" +
+                $"Euclidean algorithm: {a}, {b} => GCD: {GCD.EuclidAlgorithm(a, b, out long time)} => WorkTime: {time}ms\n" +
+                $"Stein's algorithm: {a}, {b} => GCD: {GCD.SteinAlgorithm(a, b, out time)} => WorkTime: {time}ms");
+
             Console.ReadLine();
         }
     }
